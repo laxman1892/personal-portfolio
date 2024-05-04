@@ -2,9 +2,9 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className='flex justify-between items-center h-12'>
+    <div className='flex justify-between items-center w-full h-16 my-1 px-14 shadow-md'>
         <h1 className='text-2xl'>
-            Laxman
+            <a href="/">Laxman</a>
         </h1>
         <div className="flex justify-around items-center gap-8">
             <a href="#about" className="p-3 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white">About</a>
