@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function Header() {
@@ -43,38 +44,39 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center h-14 py-1 px-4 shadow-md relative md:h-16 md:px-16">
+    <div className="flex justify-between items-center fixed w-screen bg-white h-14 py-1 px-4 shadow-md md:h-20 md:px-16">
       <h1 className="text-2xl">
         <a href="/">Laxman</a>
       </h1>
-        <div className='hidden md:flex md:justify-between md:items-center md:gap-2'>
+        <div className='hidden md:flex md:justify-between md:items-center md:gap-2 tracking-wide'>
           <a
             href="#about"
-            className="p-3 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
+            className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
           >
             About
           </a>
           <a
             href="#projects"
-            className="p-3 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
+            className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
           >
             Projects
           </a>
-          <a
-            href="#contact"
-            className="p-3 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
+          <Link
+            href="/contact"
+            className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
           >
             Contact
-          </a>
+          </Link>
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="p-3 hover:bg-red-500 rounded"
+            className="py-4 px-5 hover:bg-[tomato] hover:text-white rounded"
           >
             Resume
           </a>
-          <div className="p-3 text-center">
+        </div>
+        <div className="hidden md:block p-3 text-center">
             <label className="theme-switch">
               <input type="checkbox" className="theme-switch__checkbox" onClick={toggleTheme} checked={isDark}/>
               <div className="theme-switch__container">
@@ -105,8 +107,6 @@ function Header() {
               </div>
             </label>
           </div>
-          
-        </div>
       <button
           onClick={handleClick}
           className="flex flex-col justify-center items-center md:hidden"
@@ -131,26 +131,26 @@ function Header() {
           ></span>
         </button>
       <div className={`md:hidden bg-white flex flex-col items-center absolute top-14 right-0 gap-1 overflow-x-hidden text-center mt-2 mr-1 transition-all duration-[400ms] ease-in ${isOpen ? 'w-2/5' : 'w-0'}`}>
-        <a
-          href="#about"
+        <Link
+          href="/about"
           className="w-full p-3 transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
         >
           About
-        </a>
+        </Link>
         <span className="w-full h-[1px] bg-black"></span>
-        <a
-          href="#projects"
+        <Link
+          href="/projects"
           className="w-full p-3 transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
         >
           Projects
-        </a>
+        </Link>
         <span className="w-full h-[1px] bg-black"></span>
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="w-full p-3 transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
         >
           Contact
-        </a>
+        </Link>
         <span className="w-full h-[1px] bg-black"></span>
         <a
           href="/resume.pdf"
