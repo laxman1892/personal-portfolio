@@ -44,7 +44,8 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center fixed w-screen bg-white h-14 py-1 px-4 shadow-md md:h-20 md:px-16">
+    <div className="h-14 md:h-20 w-screen md:flex md:justify-center bg-white fixed shadow-lg">
+      <div className="h-[inherit] flex justify-between items-center bg-white px-6 md:px-0 md:w-[742px] lg:w-[800px]">
       <h1 className="text-2xl">
         <a href="/">Laxman</a>
       </h1>
@@ -195,6 +196,8 @@ function Header() {
         
       </div>
     </div>
+    </div>
+    
   );
 }
 
