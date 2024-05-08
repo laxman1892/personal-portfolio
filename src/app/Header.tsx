@@ -25,22 +25,6 @@ function Header() {
 
   const handleClick = () => {
     setOpen(!isOpen);
-    useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      setIsDark(mediaQuery.matches);
-    };
-
-    handleChange(); // Initial check
-    mediaQuery.addEventListener('change', handleChange);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
- }, []);
-
-  function toggleTheme() {
-    setIsDark(!isDark);
-    console.log(isDark);
-  }
   };
 
   return (
@@ -50,18 +34,18 @@ function Header() {
         <a href="/">Laxman</a>
       </h1>
         <div className='hidden md:flex md:justify-between md:items-center md:gap-2 tracking-wide'>
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
           >
             About
-          </a>
-          <a
-            href="#projects"
+          </Link>
+          <Link
+            href="/projects"
             className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
           >
             Projects
-          </a>
+          </Link>
           <Link
             href="/contact"
             className="py-4 px-5 transition-all duration-300 ease-in-out hover:bg-black hover:rounded hover:text-white"
