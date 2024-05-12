@@ -1,5 +1,6 @@
 export default function Contact() {
   return (
+    // comments
     <div className="md:h-screen pt-16 md:pt-0 flex justify-center items-center">
       <div className="grid sm:grid-cols-2 items-center gap-16 px-6 md:px-0 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333]">
         <div>
