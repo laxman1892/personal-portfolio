@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./Header";
 
 export const metadata: Metadata = {
   title: "Laxman Rijal | Web developer",
@@ -15,8 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#f2f2f2] relative font-[Inconsolata]">
-        <Header />
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }
